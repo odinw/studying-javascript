@@ -1,0 +1,1 @@
+document.write("write something by js file");
