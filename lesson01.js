@@ -3,4 +3,11 @@
     it's multi-line
     comments
  */
-document.write("write something by js file");
+var itsString = "it's string";
+var itsNumber = 12.3;
+var itsBoolean = true;
+document.write(itsString);
+document.write("<br />");
+document.write(itsNumber);
+document.write("<br />");
+document.write(itsBoolean);
