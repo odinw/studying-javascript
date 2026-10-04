@@ -1,5 +1,67 @@
 
-.main {
+body {
+    background-color: greenyellow;
     display: flex;
     justify-content: center;
+}
+
+.mainDiv {
+    background-color: white;
+    width: 300px;
+    padding: 30px;
+    margin-top: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); // 水平 垂直 模糊半徑 透明度
+}
+
+.keyinDiv {
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden; /* 超出圓角的區域 隱藏起來 */
+}
+
+#itemInput {
+    flex-grow: 1;
+    border: none;
+    background-color: antiquewhite;
+    padding: 10px 15px;
+    outline: none; /* 輪廓 關閉*/
+}
+
+#addItemBtn {
+    background-color: greenyellow;
+    border: none;
+    color: white;
+    padding: 10px 15px; /* 內距: 上下10px, 左右15px */
+    cursor: pointer;
+}
+
+#listUi {
+    list-style-type: none; /*項目符號 關閉*/
+    padding: 0; /* 切齊輸入框的左邊 */
+}
+
+#listUi li {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid antiquewhite;
+}
+
+#listUi label {
+    flex-grow: 1;
+}
+
+.doneCheckbox {
+    margin-right: 10px;
+}
+
+.recycle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.recycle:hover {
+    opacity: 1;
 }

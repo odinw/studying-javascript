@@ -2,8 +2,6 @@
 const input = document.getElementById("itemInput");
 const listUi = document.getElementById("listUi");
 
-const listDiv = document.querySelector("#listDiv");
-
 function addItem(task){
     console.log(input.value);
     if (IsStringEmpty(input.value)) return;
