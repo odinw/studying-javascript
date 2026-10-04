@@ -1,22 +1,22 @@
 // get input and insert to list
-const input = document.getElementById("taskInput");
+const input = document.getElementById("itemInput");
 const listUi = document.getElementById("listUi");
 
 const listDiv = document.querySelector("#listDiv");
 
-function addTask(task){
+function addItem(task){
     console.log(input.value);
     if (IsStringEmpty(input.value)) return;
 
-    const s = document.createElement("li");
-    s.innerHTML = `
+    const item = document.createElement("li");
+    item.innerHTML = `
         <label>${input.value}</label>
         <button class="recycle">🗑️</button>
     `
-    s.addEventListener("click", function () {
-        s.remove();
+    item.addEventListener("click", function () {
+        item.remove();
     });
-    listUi.append(s);
+    listUi.append(item);
     input.value = "";
 }
 
@@ -27,4 +27,4 @@ function IsStringEmpty(s){
         return false;
 }
 
-submitBtn.addEventListener("click", addTask);
+addItemBtn.addEventListener("click", addItem);
