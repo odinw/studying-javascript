@@ -8,8 +8,14 @@ function addTask(task){
     console.log(input.value);
     if (IsStringEmpty(input.value)) return;
 
-    let s = document.createElement("li");
-    s.textContent = input.value;
+    const s = document.createElement("li");
+    s.innerHTML = `
+        <label>${input.value}</label>
+        <button class="recycle">🗑️</button>
+    `
+    s.addEventListener("click", function () {
+        s.remove();
+    });
     listUi.append(s);
     input.value = "";
 }
