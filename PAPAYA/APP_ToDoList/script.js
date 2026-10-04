@@ -28,3 +28,7 @@ function IsStringEmpty(s){
 }
 
 addItemBtn.addEventListener("click", addItem);
+itemInput.addEventListener("keyup", function(e) {
+    if (e.key === "Enter")
+        addItem();
+});
