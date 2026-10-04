@@ -10,6 +10,7 @@ function addItem(task){
 
     const item = document.createElement("li");
     item.innerHTML = `
+        <input type="checkbox" class="doneCheckbox">
         <label>${input.value}</label>
         <button class="recycle">🗑️</button>
     `
@@ -17,6 +18,20 @@ function addItem(task){
     recycle.addEventListener("click", function () {
         item.remove();
     });
+    const doneCheckbox = item.querySelector(".doneCheckbox");
+    doneCheckbox.addEventListener("change", function() {
+        if (doneCheckbox.checked){
+            item.style.textDecoration = "line-through";
+            item.style.color = "#999";
+            listUi.append(item);
+        }
+        else {
+            item.style.textDecoration = "none";
+            item.style.color = "";
+            listUi.prepend(item);
+        }
+    });
+
     listUi.append(item);
     input.value = "";
 }
