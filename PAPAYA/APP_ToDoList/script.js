@@ -13,7 +13,8 @@ function addItem(task){
         <label>${input.value}</label>
         <button class="recycle">🗑️</button>
     `
-    item.addEventListener("click", function () {
+    const recycle = item.querySelector(".recycle");
+    recycle.addEventListener("click", function () {
         item.remove();
     });
     listUi.append(item);
